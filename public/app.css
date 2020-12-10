@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -407,7 +409,7 @@ body ul {
 
 .container {
   max-width: 1200px;
-  margin: auto 0;
+  margin: 0 auto;
 }
 
 .container::after {
@@ -432,7 +434,6 @@ section .intro-text {
 }
 
 header {
-  height: 100px;
   background-color: #101010;
 }
 
@@ -463,5 +464,71 @@ header .top-header ul li a span {
 header .top-header ul li a:hover span {
   text-decoration: underline;
   color: #f1f1f1;
+}
+
+header .bottom-header .navbar {
+  padding: 0;
+  margin: 0;
+  float: left;
+  font-size: 14.4px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+header .bottom-header .navbar > li {
+  display: inline-block;
+  position: relative;
+}
+
+header .bottom-header .navbar > li img {
+  margin-right: 20px;
+}
+
+header .bottom-header .navbar > li > a {
+  color: #f1f1f1;
+  text-decoration: none;
+  display: inline-block;
+  padding: 14px 28px;
+}
+
+header .bottom-header .navbar > li > a.dropdown::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\F107";
+  color: #878787;
+  margin-left: 5px;
+}
+
+header .bottom-header .navbar > li > a:hover {
+  background-color: #f1f1f1;
+  color: #101010;
+}
+
+header .bottom-header .navbar > li > a:hover + .dropdown-menu,
+header .bottom-header .navbar > li > a + .dropdown-menu:hover {
+  display: inline-block;
+}
+
+.dropdown-menu {
+  display: none;
+  width: 200px;
+  padding: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 3;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 10px;
+  color: #101010;
+  background-color: #f1f1f1;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #e6e6e6;
 }
 

@@ -1,5 +1,4 @@
 header {
-    height: 100px;
     background-color: $primaryColor;
 
     .top-header ul {
@@ -32,6 +31,68 @@ header {
         }
     }
 
+    .bottom-header .navbar {
+        padding: 0;
+        margin: 0;
+        float: left;
+        font-size: $fontSize*0.8;
+        @include flex(flex-start, center);
 
+        & > li {
+            display: inline-block;
+            position: relative;
 
+            img {
+                margin-right: $spacing;
+            }
+
+            & > a {
+                color: $secondaryColor;
+                text-decoration: none;
+                display: inline-block;
+                padding: $spacing*0.7 $spacing*1.4;
+
+                &.dropdown::after {
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    content: "\f107";
+                    color: $subColor;
+                    margin-left: $spacing / 4;
+                }
+
+                &:hover {
+                    background-color: $secondaryColor;
+                    color: $primaryColor;
+                }
+
+                &:hover + .dropdown-menu,
+                & + .dropdown-menu:hover {
+                    display: inline-block;
+                }
+            }
+        }
+    }
+
+}
+
+.dropdown-menu {
+    display: none;
+    width: 200px;
+    padding: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 3;
+
+    li a {
+        display: block;
+        padding: $spacing/2;
+        color: $primaryColor;
+        background-color: $secondaryColor;
+        text-decoration: none;
+
+        &:hover {
+            background-color: $darkerSecondaryColor;
+        }
+    }
 }
