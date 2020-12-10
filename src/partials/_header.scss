@@ -1,0 +1,37 @@
+header {
+    height: 100px;
+    background-color: $primaryColor;
+
+    .top-header ul {
+        margin: $spacing/2 0;
+        float: right;
+        font-size: $fontSize*0.8;
+
+        li {
+            display: inline-block;
+            margin: 0 $spacing/2;
+
+            a {
+                text-decoration: none;
+
+                i {
+                    color: $linkColor
+                }
+
+                span {
+                    // color: #989898
+                    color: $subColor;
+                    margin-left: $spacing/4;
+                }
+
+                &:hover span {
+                    text-decoration: underline;
+                    color: $secondaryColor;
+                }
+            }
+        }
+    }
+
+
+
+}
