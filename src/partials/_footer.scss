@@ -84,4 +84,43 @@ footer {
             }
         }
     }
+
+    .bottom-footer {
+        background-color: lighten($primaryColor, 5%);
+        color: $secondaryColor;
+        padding: $spacing 0;
+
+        .ads-list {
+            float: left;
+
+            img:not(:first-child) {
+                margin-left: $spacing / 2;
+            }
+        }
+
+        .copy-list {
+            float: right;
+            margin: 0;
+            padding: 0;
+            height: 64px;
+            @include flex(flex-start, center);
+            font-size: $fontSize * 0.8;
+
+            li {
+                display: inline-block;
+                margin-left: $spacing;
+
+                a {
+                    text-decoration: none;
+                    color: $subColor;
+                    font-size: $fontSize * 0.75;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+    }
 }

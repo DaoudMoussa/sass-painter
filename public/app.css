@@ -618,3 +618,43 @@ footer .top-footer #social-list li .rss {
   background-color: #fe8d00;
 }
 
+footer .bottom-footer {
+  background-color: #1d1d1d;
+  color: #f1f1f1;
+  padding: 20px 0;
+}
+
+footer .bottom-footer .ads-list {
+  float: left;
+}
+
+footer .bottom-footer .ads-list img:not(:first-child) {
+  margin-left: 10px;
+}
+
+footer .bottom-footer .copy-list {
+  float: right;
+  margin: 0;
+  padding: 0;
+  height: 64px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14.4px;
+}
+
+footer .bottom-footer .copy-list li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+footer .bottom-footer .copy-list li a {
+  text-decoration: none;
+  color: #878787;
+  font-size: 13.5px;
+}
+
+footer .bottom-footer .copy-list li a:hover {
+  text-decoration: underline;
+}
+
